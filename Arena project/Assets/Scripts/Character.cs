@@ -8,4 +8,5 @@ public class Character : MonoBehaviour
     public int Agility = 0;
     public int Endurance = 0;
     public int Level = 0;
+    public int ExpScore = 0;
 }
