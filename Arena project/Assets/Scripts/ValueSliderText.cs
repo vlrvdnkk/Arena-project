@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ValueSliderText : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _valueText;
-    public void ValueChange (float value)
+    private void ValueChange (float value)
     {
         _valueText.text = value.ToString();
     }

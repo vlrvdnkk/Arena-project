@@ -9,8 +9,7 @@ using UnityEngine.UI;
 public class ExperienceBar : MonoBehaviour
 {
     [SerializeField] private double _experience = 0;
-    [SerializeField] private int _level = 0;
-    [SerializeField] private int _strong = 0;
+    [SerializeField] private Character _character;
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI _levelText;
 
@@ -24,13 +23,19 @@ public class ExperienceBar : MonoBehaviour
         if (_experience >= 100)
         {
             _experience = 0;
-            _level++;
-            _levelText.text = _level.ToString();
+            _character.Level++;
+            _levelText.text = _character.Level.ToString();
         }
         else if (Input.GetMouseButtonDown(0))
-            _experience += 1 + _strong * 0.5;
+            _experience += 1 + _character.Strong * 0.5;
         slider.value = Convert.ToSingle(_experience);
 
     }
+
+    //private void GetLevel()
+    //{
+    //    _character.Level++;
+    //    _levelText.text = _character.Level.ToString();
+    //}
 
 }
