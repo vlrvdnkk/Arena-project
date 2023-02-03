@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ClickerManager : MonoBehaviour
 {
+    //private double CoolDounTimer;
     [SerializeField] private int _clickCount;
     void Start()
     {
-        
+
     }
 
     void Update()
