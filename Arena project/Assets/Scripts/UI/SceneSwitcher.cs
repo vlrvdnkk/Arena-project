@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-private void NextScene(int _sceneName)
+public void NextScene(int _sceneName)
     {
         SceneManager.LoadScene( _sceneName );
     }
